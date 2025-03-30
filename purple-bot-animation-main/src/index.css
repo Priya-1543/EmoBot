@@ -1,0 +1,71 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222 47% 11%;
+    --foreground: 0 0% 98%;
+
+    --card: 222 47% 11%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 222 47% 11%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 252 80% 74%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 252 34% 54%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 223 47% 21%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 223 47% 21%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 223 47% 21%;
+    --input: 223 47% 21%;
+    --ring: 252 80% 74%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-chatbot-dark text-foreground overflow-hidden;
+  }
+}
+
+.chat-container {
+  height: calc(100vh - 8rem);
+}
+
+.message-transition {
+  transition: all 0.3s ease;
+}
+
+.scrollbar-thin {
+  scrollbar-width: thin;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  @apply bg-chatbot-purple/30 rounded-full hover:bg-chatbot-purple/50 transition-colors;
+}
